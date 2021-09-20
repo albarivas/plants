@@ -1,18 +1,53 @@
-# Salesforce DX Project: Next Steps
+# Sample App to Manage your garden's plants!
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Installing using a Scratch Org
 
-## How Do You Plan to Deploy Your Changes?
+1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+   - Enable Dev Hub in your Trailhead Playground
+   - Install Salesforce CLI
+   - Install Visual Studio Code
+   - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
 
-## Configure Your Salesforce DX Project
+1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+   ```
+   sfdx force:auth:web:login -d -a myhuborg
+   ```
 
-## Read All About It
+1. Clone this repository:
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+   ```
+   git clone https://github.com/albarivas/plants
+   cd plants
+   ```
+
+1. Create a scratch org and provide it with an alias (**plants** in the command below):
+
+   ```
+   sfdx force:org:create -s -f config/project-scratch-def.json -a plants
+   ```
+
+1. Push the app to your scratch org:
+
+   ```
+   sfdx force:source:push
+   ```
+
+1. Assign the **Plants_App** permission set to the default user:
+
+   ```
+   sfdx force:user:permset:assign -n Plants_App
+   ```
+
+1. Import sample data:
+
+   ```
+   sfdx force:data:tree:import -p ./data/data-plan.json
+   ```
+
+1. Open the scratch org:
+
+   ```
+   sfdx force:org:open
+   ```
