@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Location__c</fullName>
     <externalId>false</externalId>
     <label>Location</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
-    <type>Picklist</type>
+    <type>MultiselectPicklist</type>
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
@@ -20,11 +20,7 @@
                 <default>false</default>
                 <label>Indoors</label>
             </value>
-            <value>
-                <fullName>Indoors_Outdoors</fullName>
-                <default>false</default>
-                <label>Indoors or Outdoors</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
+    <visibleLines>3</visibleLines>
 </CustomField>

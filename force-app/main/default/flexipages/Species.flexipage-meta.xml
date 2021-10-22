@@ -320,7 +320,7 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.Watering_Frequency__c</fieldItem>
+                <fieldItem>Record.Summer_Watering_Frequency__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -370,7 +370,7 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.Fertilization_Frequency__c</fieldItem>
+                <fieldItem>Record.Summer_Fertilization_Frequency__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
