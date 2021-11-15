@@ -6,11 +6,13 @@
       <p class="slds-var-p-horizontal_small description">
         {specie.Description}
       </p>
-      <img
-        class="specie slds-align_absolute-center slds-var-m-around_medium"
-        src={specie.Image_URL__c}
-        alt={specie.Name}
-      />
+      <div class="slds-align_absolute-center">
+        <img
+          class="specie slds-var-m-around_medium"
+          src={specie.Image_URL__c}
+          alt={specie.Name}
+        />
+      </div>
       <p class="slds-var-p-horizontal_small">{specie.Location__c}</p>
       <!-- end body -->
     </lightning-card>
