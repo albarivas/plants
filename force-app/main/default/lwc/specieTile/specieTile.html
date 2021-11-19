@@ -1,10 +1,14 @@
 <template>
   <template if:true={specie}>
     <lightning-card title={specie.Name} icon-name="custom:custom5">
-      <lightning-button label="View Details" slot="actions"></lightning-button>
+      <lightning-button
+        label="View Details"
+        slot="actions"
+        onclick={handleViewDetails}
+      ></lightning-button>
       <!-- body -->
       <p class="slds-var-p-horizontal_small description">
-        {specie.Description}
+        {specie.Description__c}
       </p>
       <div class="slds-align_absolute-center">
         <img

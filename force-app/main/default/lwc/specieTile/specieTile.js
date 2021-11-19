@@ -1,6 +1,7 @@
 import { LightningElement, api } from "lwc";
+import { NavigationMixin } from "lightning/navigation";
 
-export default class SpecieTile extends LightningElement {
+export default class SpecieTile extends NavigationMixin(LightningElement) {
   /*specie = {
     Name: "Jazmin",
     Description: "Olorosa y bonita planta trepadora",
@@ -9,4 +10,14 @@ export default class SpecieTile extends LightningElement {
     Location__c: "Indoors,Outdoors"
   };*/
   @api specie;
+
+  handleViewDetails() {
+    this[NavigationMixin.Navigate]({
+      type: "standard__recordPage",
+      attributes: {
+        recordId: this.specie.Id,
+        actionName: "view"
+      }
+    });
+  }
 }
