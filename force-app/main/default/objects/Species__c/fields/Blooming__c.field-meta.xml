@@ -8,7 +8,69 @@
     <type>MultiselectPicklist</type>
     <valueSet>
         <restricted>true</restricted>
-        <valueSetName>Months</valueSetName>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>JAN</fullName>
+                <default>false</default>
+                <label>JAN</label>
+            </value>
+            <value>
+                <fullName>FEB</fullName>
+                <default>false</default>
+                <label>FEB</label>
+            </value>
+            <value>
+                <fullName>MAR</fullName>
+                <default>false</default>
+                <label>MAR</label>
+            </value>
+            <value>
+                <fullName>APR</fullName>
+                <default>false</default>
+                <label>APR</label>
+            </value>
+            <value>
+                <fullName>MAY</fullName>
+                <default>false</default>
+                <label>MAY</label>
+            </value>
+            <value>
+                <fullName>JUN</fullName>
+                <default>false</default>
+                <label>JUN</label>
+            </value>
+            <value>
+                <fullName>JUL</fullName>
+                <default>false</default>
+                <label>JUL</label>
+            </value>
+            <value>
+                <fullName>AUG</fullName>
+                <default>false</default>
+                <label>AUG</label>
+            </value>
+            <value>
+                <fullName>SEP</fullName>
+                <default>false</default>
+                <label>SEP</label>
+            </value>
+            <value>
+                <fullName>OCT</fullName>
+                <default>false</default>
+                <label>OCT</label>
+            </value>
+            <value>
+                <fullName>NOV</fullName>
+                <default>false</default>
+                <label>NOV</label>
+            </value>
+            <value>
+                <fullName>DEV</fullName>
+                <default>false</default>
+                <label>DEV</label>
+            </value>
+        </valueSetDefinition>
     </valueSet>
     <visibleLines>6</visibleLines>
 </CustomField>

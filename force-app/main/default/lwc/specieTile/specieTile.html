@@ -1,3 +1,4 @@
+<!-- sldsValidatorIgnore -->
 <template>
   <template if:true={specie}>
     <lightning-card title={specie.Name} icon-name="custom:custom5">
@@ -17,7 +18,21 @@
           alt={specie.Name}
         />
       </div>
-      <p class="slds-var-p-horizontal_small">{specie.Location__c}</p>
+      <p class="slds-var-p-horizontal_small slds-align_absolute-center">
+        <template if:true={showOutdoorsIcon}>
+          <lightning-icon
+            icon-name="custom:custom3"
+            alternative-text="ourdoors"
+          ></lightning-icon>
+        </template>
+        <template if:true={showIndoorsIcon}>
+          <lightning-icon
+            icon-name="standard:home"
+            alternative-text="indoors"
+            class="slds-var-m-left_small"
+          ></lightning-icon>
+        </template>
+      </p>
       <!-- end body -->
     </lightning-card>
   </template>

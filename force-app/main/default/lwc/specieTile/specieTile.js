@@ -11,6 +11,14 @@ export default class SpecieTile extends NavigationMixin(LightningElement) {
   };*/
   @api specie;
 
+  get showIndoorsIcon() {
+    return this.specie.Location__c.includes("Indoors");
+  }
+
+  get showOutdoorsIcon() {
+    return this.specie.Location__c.includes("Outdoors");
+  }
+
   handleViewDetails() {
     this[NavigationMixin.Navigate]({
       type: "standard__recordPage",

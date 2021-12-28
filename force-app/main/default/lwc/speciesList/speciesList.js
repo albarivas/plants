@@ -1,5 +1,5 @@
 import { LightningElement, wire } from "lwc";
-import getAllSpecies from "@salesforce/apex/SpeciesService.getAllSpecies";
+import getFilteredSpecies from "@salesforce/apex/SpeciesService.getFilteredSpecies";
 
 export default class SpeciesList extends LightningElement {
   /*species = [
@@ -28,6 +28,15 @@ export default class SpeciesList extends LightningElement {
     }
   ];*/
 
-  @wire(getAllSpecies)
+  searchText = "";
+
+  @wire(getFilteredSpecies, { searchText: "$searchText" })
   species;
+
+  handleInputChange(event) {
+    const searchText = event.target.value;
+    if (searchText.length >= 3 || searchText === "") {
+      this.searchText = searchText;
+    }
+  }
 }
