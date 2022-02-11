@@ -1,4 +1,4 @@
-public with sharing class FrequencyService {
+public inherited sharing class FrequencyService {
   static Map<String, Integer> daysByFrequency = new Map<String, Integer>();
 
   static {
@@ -13,8 +13,11 @@ public with sharing class FrequencyService {
 
   static Set<Integer> summerMonths = new Set<Integer>{ 5, 6, 7, 8, 9 };
 
-  public static Integer getWateringDays(Species__c specie) {
-    Integer month = System.today().month();
+  public static Integer getWateringDays(
+    Species__c specie,
+    DateService dateServiceInstance
+  ) {
+    Integer month = dateServiceInstance.getCurrentMonth();
     if (summerMonths.contains(month)) {
       return daysByFrequency.get(specie.Summer_Watering_Frequency__c);
     } else {

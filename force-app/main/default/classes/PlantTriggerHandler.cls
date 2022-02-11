@@ -66,7 +66,10 @@ public with sharing class PlantTriggerHandler {
     // MAL --> Species__c specie = [SELECT Summer_Watering_Frequency__c FROM Species__c WHERE Id = :specieId];
     Species__c specie = speciesById.get(specieId); // BIEN!!!
     // Pedir freq de riego para esa especie
-    Integer daysToAdd = FrequencyService.getWateringDays(specie);
+    Integer daysToAdd = FrequencyService.getWateringDays(
+      specie,
+      new DateService()
+    );
     // sig fecha riego = ultima fecha riego + dias devueltos
     newPlant.Next_Water__c = newPlant.Last_Watered__c.addDays(daysToAdd);
   }
