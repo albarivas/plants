@@ -93,11 +93,11 @@ jobs:
 
       # Assign permissionset
       - name: "Assign permissionset to default user"
-        run: sfdx force:user:permset:assign -n ebikes
+        run: sfdx force:user:permset:assign -n Plants_App
 
       # Import sample data
       - name: "Import sample data"
-        run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
+        run: sfdx force:data:tree:import -p ./data/data-plan.json
 
       # Run Apex tests in scratch org
       - name: "Run Apex tests"
