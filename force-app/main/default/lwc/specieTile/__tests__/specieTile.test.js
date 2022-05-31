@@ -10,12 +10,6 @@ describe("c-specie-tile", () => {
     }
   });
 
-  // Helper function to wait until the microtask queue is empty. This is needed for promise
-  // timing when calling imperative Apex.
-  async function flushPromises() {
-    return Promise.resolve();
-  }
-
   it("DOM renderiza correctamente cosas que dependen de la inicialización", () => {
     // GIVEN
     const element = createElement("c-specie-tile", {
