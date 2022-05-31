@@ -24,6 +24,7 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -33,16 +34,19 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Description__c</fieldItem>
+                <identifier>RecordDescription__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Regions__c</fieldItem>
+                <identifier>RecordRegions__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9f1161a8-5f23-4d06-9bb2-d6e44d76baaf</name>
@@ -52,11 +56,20 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Image__c</fieldItem>
+                <identifier>RecordImage__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Description__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>gastronomía</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Image_URL__c</fieldItem>
+                <identifier>RecordImage_URL__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1c4fef43-0dbf-457a-b98f-afd03b6a82da</name>
@@ -70,6 +83,7 @@
                     <value>Facet-9f1161a8-5f23-4d06-9bb2-d6e44d76baaf</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -79,6 +93,7 @@
                     <value>Facet-1c4fef43-0dbf-457a-b98f-afd03b6a82da</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-7b774896-085d-4ede-b8c0-6f100ebfda04</name>
@@ -96,6 +111,7 @@
                     <value>General Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-fbe177b8-e912-4cc1-b995-6e4310c9fae0</name>
@@ -105,11 +121,13 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Location__c</fieldItem>
+                <identifier>RecordLocation__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Pot__c</fieldItem>
+                <identifier>RecordPot__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9b8c1df4-6c68-4355-8a7a-bb2dca71598e</name>
@@ -127,6 +145,7 @@
                     <value>Facet-9b8c1df4-6c68-4355-8a7a-bb2dca71598e</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -136,6 +155,7 @@
                     <value>Facet-870549f9-2a86-4018-a3ab-0ada63018965</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-df52192e-84e5-4bb9-991b-aaacebc43425</name>
@@ -145,6 +165,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Light__c</fieldItem>
+                <identifier>RecordLight__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-97b8ad2d-46f7-4995-ac64-732fc7dd323f</name>
@@ -154,6 +175,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Light_Notes__c</fieldItem>
+                <identifier>RecordLight_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-fa61fa08-b424-469b-9b36-5d1c661023c2</name>
@@ -167,6 +189,7 @@
                     <value>Facet-97b8ad2d-46f7-4995-ac64-732fc7dd323f</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -176,6 +199,7 @@
                     <value>Facet-fa61fa08-b424-469b-9b36-5d1c661023c2</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column6</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-077e2fde-d07d-43a5-b55a-32de7a12d2ff</name>
@@ -185,11 +209,13 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Max_Temperature__c</fieldItem>
+                <identifier>RecordMax_Temperature__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Temperature_Notes__c</fieldItem>
+                <identifier>RecordTemperature_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-65723447-9572-4a33-86f4-d82dd28ea7f6</name>
@@ -199,6 +225,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Min_Temperature__c</fieldItem>
+                <identifier>RecordMin_Temperature__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2f5115cb-b893-4836-ab94-ae327020729e</name>
@@ -212,6 +239,7 @@
                     <value>Facet-65723447-9572-4a33-86f4-d82dd28ea7f6</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column7</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -221,6 +249,7 @@
                     <value>Facet-2f5115cb-b893-4836-ab94-ae327020729e</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-7c04aa29-9a3a-48ce-ab96-3f8f38aedc69</name>
@@ -230,6 +259,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Soil__c</fieldItem>
+                <identifier>RecordSoil__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-f2940964-4124-4ab8-806e-9ab375637e53</name>
@@ -247,6 +277,7 @@
                     <value>Facet-f2940964-4124-4ab8-806e-9ab375637e53</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -256,6 +287,7 @@
                     <value>Facet-a4b966b9-bd08-4130-8441-61fdf36caf04</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-2dd719a0-d319-488c-a7a4-db9351578c53</name>
@@ -273,6 +305,7 @@
                     <value>Location</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection2</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -286,6 +319,7 @@
                     <value>Light</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -299,6 +333,7 @@
                     <value>Temperature</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -312,6 +347,7 @@
                     <value>Soil</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection5</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-55cb7c6e-8d2d-404e-9cb7-1306638d7125</name>
@@ -321,11 +357,13 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Summer_Watering_Frequency__c</fieldItem>
+                <identifier>RecordWatering_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Watering_Notes__c</fieldItem>
+                <identifier>RecordWatering_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9d50b894-2681-45fe-ae6c-610ccaae8def</name>
@@ -335,11 +373,13 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Winter_Watering_Frequency__c</fieldItem>
+                <identifier>RecordWinter_Watering_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Pulverization__c</fieldItem>
+                <identifier>RecordPulverization__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-d5cbb506-fd4e-4ce1-93d4-de49b9f06484</name>
@@ -353,6 +393,7 @@
                     <value>Facet-9d50b894-2681-45fe-ae6c-610ccaae8def</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column11</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -362,6 +403,7 @@
                     <value>Facet-d5cbb506-fd4e-4ce1-93d4-de49b9f06484</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column12</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-9aed4941-1239-419a-9144-51fc47c25965</name>
@@ -371,11 +413,13 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Summer_Fertilization_Frequency__c</fieldItem>
+                <identifier>RecordFertilization_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Recommended_Fertilizer__c</fieldItem>
+                <identifier>RecordRecommended_Fertilizer__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-4024302c-5a91-4ec4-a7eb-31d3cbf340f7</name>
@@ -385,6 +429,8 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Winter_Fertilization_Frequency__c</fieldItem>
+                <identifier
+        >RecordWinter_Fertilization_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-efce2876-6cdf-4df7-9f12-b6ad1952a89c</name>
@@ -398,6 +444,7 @@
                     <value>Facet-4024302c-5a91-4ec4-a7eb-31d3cbf340f7</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column13</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -407,6 +454,7 @@
                     <value>Facet-efce2876-6cdf-4df7-9f12-b6ad1952a89c</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column14</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-16885ff8-e5c6-4983-aa48-741966b04cd0</name>
@@ -416,6 +464,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Pruning_Notes__c</fieldItem>
+                <identifier>RecordPruning_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-ddc55961-5863-468f-996f-1abdd24f86df</name>
@@ -433,6 +482,7 @@
                     <value>Facet-ddc55961-5863-468f-996f-1abdd24f86df</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column15</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -442,6 +492,7 @@
                     <value>Facet-abc75754-f458-44fc-b82c-a8f532f3244a</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column16</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-31072e09-c7c7-4e64-94c5-95dcf2b60eb3</name>
@@ -459,6 +510,7 @@
                     <value>Watering</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection6</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -472,6 +524,7 @@
                     <value>Fertilization</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection7</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -485,6 +538,7 @@
                     <value>Pruning</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-7cd65606-faca-4c64-b63f-d25178bb4773</name>
@@ -506,6 +560,7 @@
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>detailTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -523,6 +578,7 @@
                     <value>Environment</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -536,6 +592,7 @@
                     <value>Caring</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>customTab2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-cc5ef2de-8618-4935-b4c6-88b7211b3898</name>
@@ -549,6 +606,7 @@
                     <value>Facet-cc5ef2de-8618-4935-b4c6-88b7211b3898</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
@@ -558,16 +616,19 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Propagation__c</fieldItem>
+                <identifier>RecordPropagation__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Propagation_Notes__c</fieldItem>
+                <identifier>RecordPropagation_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Sowing__c</fieldItem>
+                <identifier>RecordSowing__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -580,6 +641,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Planting__c</fieldItem>
+                <identifier>RecordPlanting__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -592,6 +654,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Planting_Distance_CM__c</fieldItem>
+                <identifier>RecordPlanting_Distance_CM__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -604,6 +667,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Harvesting_After_Months__c</fieldItem>
+                <identifier>RecordHarvesting_After_Months__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -616,6 +680,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Blooming__c</fieldItem>
+                <identifier>RecordBlooming__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -628,6 +693,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Blooming_Notes__c</fieldItem>
+                <identifier>RecordBlooming_Notes__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.Type__c}</leftValue>
@@ -648,6 +714,7 @@
                     <value>Facet-64beefec-aa13-43a1-a222-ab64833c78a3</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column17</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-f59a1030-75b5-4b03-bb6f-d2ca5c0bd199</name>
@@ -665,6 +732,7 @@
                     <value>Lifecycle</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection9</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>
