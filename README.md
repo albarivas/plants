@@ -1,5 +1,7 @@
 # Sample App to Manage your garden's plants!
 
+[![CI Workflow](https://github.com/albarivas/plants/workflows/CI/badge.svg)](https://github.com/albarivas/plants/actions?query=workflow%3ACI)[![codecov](https://codecov.io/gh/albarivas/plants/branch/main/graph/badge.svg)](https://codecov.io/gh/albarivas/plants)
+
 ## Installing using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
