@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
-    "lint": "npm run lint:lwc && npm run lint:aura",
-    "lint:aura": "eslint **/aura/**",
+    "lint": "npm run lint:lwc",
     "lint:lwc": "eslint **/lwc/**",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
@@ -18,7 +17,6 @@
   "devDependencies": {
     "@prettier/plugin-xml": "^0.12.0",
     "@salesforce/eslint-config-lwc": "^0.11.0",
-    "@salesforce/eslint-plugin-aura": "^2.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^6.11.0",
@@ -36,7 +34,7 @@
     "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
       "prettier --write"
     ],
-    "**/{aura|lwc}/**": [
+    "**/{lwc}/**": [
       "eslint"
     ]
   }
