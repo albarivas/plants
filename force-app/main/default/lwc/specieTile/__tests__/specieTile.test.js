@@ -34,7 +34,7 @@ describe("c-specie-tile", () => {
     expect(lightningCardEl.title).toBe("Jazmin");
     // Query img element
     const imgEl = element.shadowRoot.querySelector("img");
-    expect(imgEl).not.toBeNull();
+    expect(imgEl).toBeNull();
     expect(imgEl.src).toBe(
       "https://i.pinimg.com/originals/88/a4/9f/88a49f73cb34bb49ea799087ad2fba15.jpg"
     );
