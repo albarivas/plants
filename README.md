@@ -1,6 +1,6 @@
 # Sample App to Manage your garden's plants!
 
-[![CI Workflow](https://github.com/albarivas/plants/workflows/CI/badge.svg)](https://github.com/albarivas/plants/actions?query=workflow%3ACI)[![codecov](https://codecov.io/gh/albarivas/plants/branch/main/graph/badge.svg)](https://codecov.io/gh/albarivas/plants)
+[![CI Workflow](https://github.com/albarivas/plants/workflows/CI/badge.svg)](https://github.com/albarivas/plants/actions?query=workflow%3ACI)[![codecov](https://codecov.io/gh/albarivas/plants/branch/master/graph/badge.svg)](https://codecov.io/gh/albarivas/plants)
 
 ## Installing using a Scratch Org
 
