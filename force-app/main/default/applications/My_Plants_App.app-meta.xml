@@ -9,7 +9,8 @@
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
-    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavPersonalizationDisabled>
+        false</isNavPersonalizationDisabled>
     <label>My Plants App</label>
     <navType>Standard</navType>
     <tabs>Species__c</tabs>
