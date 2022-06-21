@@ -51,6 +51,7 @@ public with sharing class PlantTriggerHandler {
       SELECT Summer_Watering_Frequency__c, Winter_Watering_Frequency__c
       FROM Species__c
       WHERE Id IN :specieIds
+      WITH SECURITY_ENFORCED
     ];
     return new Map<Id, Species__c>(species);
   }

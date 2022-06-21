@@ -1,4 +1,4 @@
-public with sharing class ForecastService {
+public inherited sharing class ForecastService {
   public static void postNotifications() {
     // Realizar las tares que queremos planificar
     // 1. Mirar que temperatura va a hacer hoy
@@ -23,6 +23,7 @@ public with sharing class ForecastService {
             Max_Temperature__c < :maxTempToday
             OR Min_Temperature__c > :minTempToday
         )
+      WITH SECURITY_ENFORCED
     ];
 
     // 3. Si encuentro alguna, mandar notificación
@@ -32,6 +33,7 @@ public with sharing class ForecastService {
         SELECT Id, DeveloperName
         FROM CustomNotificationType
         WHERE DeveloperName = 'Temperature_Alert'
+        WITH SECURITY_ENFORCED
       ];
 
       // Create a new custom notification
