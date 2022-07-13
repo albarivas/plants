@@ -57,19 +57,18 @@
             <fieldInstance>
                 <fieldItem>Record.Image__c</fieldItem>
                 <identifier>RecordImage__cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Description__c}</leftValue>
-                        <operator>CONTAINS</operator>
-                        <rightValue>gastronomía</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Image_URL__c</fieldItem>
                 <identifier>RecordImage_URL__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Type__c</fieldItem>
+                <identifier>RecordType_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1c4fef43-0dbf-457a-b98f-afd03b6a82da</name>

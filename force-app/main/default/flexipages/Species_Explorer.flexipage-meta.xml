@@ -9,12 +9,6 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>platformEventSubscriptionExample</componentName>
-                <identifier>c_platformEventSubscriptionExample1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentName>speciesList</componentName>
                 <identifier>c_speciesList1</identifier>
             </componentInstance>

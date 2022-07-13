@@ -12,11 +12,11 @@ export default class SpecieTile extends NavigationMixin(LightningElement) {
   @api specie;
 
   get showIndoorsIcon() {
-    return this.specie.Location__c.includes("Indoors");
+    return this.specie.Location__c?.includes("Indoors");
   }
 
   get showOutdoorsIcon() {
-    return this.specie.Location__c.includes("Outdoors");
+    return this.specie.Location__c?.includes("Outdoors");
   }
 
   handleViewDetails() {
