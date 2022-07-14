@@ -1,0 +1,23 @@
+<template>
+  <template if:true={species.data}>
+    <lightning-accordion allow-multiple-sections-open>
+      <template for:each={species.data} for:item="spec">
+        <lightning-accordion-section
+          key={spec.Name}
+          name={spec.Name}
+          label={spec.Name}
+        >
+          <template if:true={spec.Plants__r}>
+            <template for:each={spec.Plants__r} for:item="plant">
+              <p key={plant.Name}>{plant.Name}</p>
+            </template>
+          </template>
+          <template if:false={spec.Plants__r}>
+            Species has no plants.
+          </template>
+        </lightning-accordion-section>
+      </template>
+    </lightning-accordion>
+  </template>
+  <template if:true={species.error}> Error retrieving species.</template>
+</template>
