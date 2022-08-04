@@ -218,6 +218,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>Species_with_Plants</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Species__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>

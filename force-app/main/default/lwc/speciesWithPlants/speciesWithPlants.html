@@ -1,0 +1,22 @@
+<template>
+  <lightning-accordion>
+    <template if:true={speciesWithPlants.data}>
+      <template for:each={speciesWithPlants.data} for:item="species">
+        <lightning-accordion-section
+          key={species.Id}
+          name={species.Name}
+          label={species.Name}
+        >
+          <template if:true={species.Plants__r}>
+            <template for:each={species.Plants__r} for:item="plant">
+              <p key={plant.Id}>{plant.Name}</p>
+            </template>
+          </template>
+          <template if:false={species.Plants__r}>
+            <p>No plants.</p>
+          </template>
+        </lightning-accordion-section>
+      </template>
+    </template>
+  </lightning-accordion>
+</template>

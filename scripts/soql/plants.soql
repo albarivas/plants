@@ -1,8 +1,3 @@
-// Use .soql files to store SOQL queries.
-// You can execute queries in VS Code by selecting the
-//     query text and running the command:
-//     SFDX: Execute SOQL Query with Currently Selected Text
-
   SELECT Name, Acquisition_Date__c
     FROM Plant__c
    WHERE Acquisition_Date__c > 2021-01-01 
