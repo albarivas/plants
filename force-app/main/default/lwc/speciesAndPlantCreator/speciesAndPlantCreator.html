@@ -1,5 +1,6 @@
+<!-- sldsValidatorIgnore -->
 <template>
-  <lightning-card title="Create Species & Plant">
+  <lightning-quick-action-panel header="Create Species with Plant!">
     <div class="slds-var-m-around_x-small">
       <!-- Species - Name -->
       <!-- Plant - Species__c (automatic) -->
@@ -16,10 +17,18 @@
         onchange={handleAcquisitionDateChange}
       ></lightning-input>
     </div>
-    <lightning-button
-      onclick={handleButtonClick}
-      label="Create Spacies & Plant"
-      class="slds-var-m-left_xx-small"
-    ></lightning-button>
-  </lightning-card>
+
+    <div slot="footer">
+      <lightning-button
+        variant="neutral"
+        label="Cancel"
+        onclick={handleCancelButtonClick}
+      ></lightning-button>
+      <lightning-button
+        onclick={handleCreateButtonClick}
+        label="Create Species & Plant"
+        class="slds-var-m-left_xx-small"
+      ></lightning-button>
+    </div>
+  </lightning-quick-action-panel>
 </template>
