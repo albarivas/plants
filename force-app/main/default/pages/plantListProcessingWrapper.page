@@ -1,0 +1,30 @@
+<apex:page
+  standardController="Plant__c"
+  recordSetVar="xxx"
+  extensions="PlantListProcessingController"
+>
+  <apex:includeLightning />
+
+  <div>RECORDSETVAR EN VF PAGE: {!xxx}</div>
+
+  <div>SELECTED IDS EN VF PAGE: {!plantIds}</div>
+
+  <div id="myComponent" />
+
+  <script>
+    $Lightning.use("c:plantListProcessingWrapperApp", function () {
+      $Lightning.createComponent(
+        "c:plantListProcessing",
+        {
+          label: "Press Me!",
+          plantIds: "{!plantIds}"
+        },
+        "myComponent",
+        function (cmp) {
+          console.log("plant list component was created");
+          // do some stuff
+        }
+      );
+    });
+  </script>
+</apex:page>
