@@ -1,13 +1,11 @@
 <template>
-  <div class="slds-align_absolute-center">
+  <div class="container slds-var-p-around_medium">
     <lightning-input
       type="text"
-      label="Enter some text"
+      label="Enter some text to filter the returned Species"
       onchange={handleInputChange}
     ></lightning-input>
-  </div>
-  <div class="slds-align_absolute-center grid">
-    <div class="slds-grid slds-wrap slds-grid_align-spread">
+    <div class="slds-grid slds-wrap slds-align_absolute-center">
       <template if:true={species.data}>
         <template for:each={species.data} for:item="specie">
           <div key={specie.Name}>
