@@ -1,5 +1,6 @@
 import { LightningElement, api } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
+import SPECIES_RESOURCE from "@salesforce/resourceUrl/species";
 
 export default class SpecieTile extends NavigationMixin(LightningElement) {
   /*specie = {
@@ -10,6 +11,11 @@ export default class SpecieTile extends NavigationMixin(LightningElement) {
     Location__c: "Indoors,Outdoors"
   };*/
   @api specie;
+
+  get imageURLFromStaticResource() {
+    // return SPECIES_RESOURCE + '/images/' + this.specie.ImageName__c;
+    return `${SPECIES_RESOURCE}/images/${this.specie.Image_Name__c}`;
+  }
 
   get showIndoorsIcon() {
     return this.specie.Location__c?.includes("Indoors");
