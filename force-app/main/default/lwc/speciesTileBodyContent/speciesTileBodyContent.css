@@ -1,0 +1,8 @@
+p.description {
+  min-height: 60px;
+}
+img.specie {
+  width: 260px;
+  border-radius: 1.5rem;
+  border: 1px solid rgb(221, 219, 218);
+}

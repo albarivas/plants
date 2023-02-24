@@ -1,0 +1,21 @@
+<template>
+  <p class="slds-var-p-horizontal_small description">{description}</p>
+  <div class="slds-align_absolute-center">
+    <img class="specie slds-var-m-around_medium" src={imageURL} alt={name} />
+  </div>
+  <p class="slds-var-p-horizontal_small slds-align_absolute-center">
+    <template if:true={showOutdoorsIcon}>
+      <lightning-icon
+        icon-name="custom:custom3"
+        alternative-text="outdoors"
+      ></lightning-icon>
+    </template>
+    <template if:true={showIndoorsIcon}>
+      <lightning-icon
+        icon-name="standard:home"
+        alternative-text="indoors"
+        class="slds-var-m-left_small"
+      ></lightning-icon>
+    </template>
+  </p>
+</template>

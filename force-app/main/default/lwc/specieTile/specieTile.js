@@ -1,6 +1,7 @@
 import { LightningElement, api } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
 import SPECIES_RESOURCE from "@salesforce/resourceUrl/species";
+import FORM_FACTOR from "@salesforce/client/formFactor";
 
 export default class SpecieTile extends NavigationMixin(LightningElement) {
   /*specie = {
@@ -23,6 +24,10 @@ export default class SpecieTile extends NavigationMixin(LightningElement) {
 
   get showOutdoorsIcon() {
     return this.specie.Location__c?.includes("Outdoors");
+  }
+
+  get isLargeFormFactor() {
+    return FORM_FACTOR === "Large";
   }
 
   handleViewDetails() {
