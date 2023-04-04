@@ -1,4 +1,5 @@
 public inherited sharing class ForecastService {
+  @future(callout=true)
   public static void postNotifications() {
     // Realizar las tares que queremos planificar
     // 1. Mirar que temperatura va a hacer hoy
