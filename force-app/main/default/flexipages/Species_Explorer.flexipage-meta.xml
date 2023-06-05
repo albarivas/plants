@@ -3,12 +3,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>specieTile</componentName>
-                <identifier>c_specieTile1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentName>speciesList</componentName>
                 <identifier>c_speciesList1</identifier>
             </componentInstance>

@@ -7,14 +7,20 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>speciesWithPlants</componentName>
-                <identifier>c_speciesWithPlants</identifier>
+                <componentName>speciesAndPlantCreator</componentName>
+                <identifier>c_speciesAndPlantCreator</identifier>
             </componentInstance>
         </itemInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>speciesWithPlants</componentName>
+                <identifier>c_speciesWithPlants</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
