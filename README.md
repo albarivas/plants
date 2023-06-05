@@ -46,7 +46,7 @@
 1. Import sample data:
 
    ```
-   sf data tree import -p data/sample-data-plan.json
+   sf data tree import -p data/data-plan.json
    ```
 
 1. Open the scratch org:
@@ -54,3 +54,5 @@
    ```
    sf org open
    ```
+
+1. Select custom theme: setup --> Themes and Branding --> Plants App --> Activate

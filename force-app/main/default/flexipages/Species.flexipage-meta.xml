@@ -33,18 +33,30 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
                 <identifier>RecordNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Description__c</fieldItem>
                 <identifier>RecordDescription__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Regions__c</fieldItem>
                 <identifier>RecordRegions__cField</identifier>
             </fieldInstance>
@@ -55,20 +67,32 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Image__c</fieldItem>
                 <identifier>RecordImage__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.Image_URL__c</fieldItem>
-                <identifier>RecordImage_URL__cField</identifier>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Type__c</fieldItem>
+                <identifier>RecordType_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.Type__c</fieldItem>
-                <identifier>RecordType_cField</identifier>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Image_Name__c</fieldItem>
+                <identifier>RecordImage_Name_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1c4fef43-0dbf-457a-b98f-afd03b6a82da</name>
@@ -106,6 +130,10 @@
                     <value>Facet-7b774896-085d-4ede-b8c0-6f100ebfda04</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>General Information</value>
                 </componentInstanceProperties>
@@ -119,12 +147,20 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Location__c</fieldItem>
                 <identifier>RecordLocation__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Pot__c</fieldItem>
                 <identifier>RecordPot__cField</identifier>
             </fieldInstance>
@@ -163,6 +199,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Light__c</fieldItem>
                 <identifier>RecordLight__cField</identifier>
             </fieldInstance>
@@ -173,6 +213,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Light_Notes__c</fieldItem>
                 <identifier>RecordLight_Notes__cField</identifier>
             </fieldInstance>
@@ -207,12 +251,20 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Max_Temperature__c</fieldItem>
                 <identifier>RecordMax_Temperature__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Temperature_Notes__c</fieldItem>
                 <identifier>RecordTemperature_Notes__cField</identifier>
             </fieldInstance>
@@ -223,6 +275,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Min_Temperature__c</fieldItem>
                 <identifier>RecordMin_Temperature__cField</identifier>
             </fieldInstance>
@@ -257,6 +313,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Soil__c</fieldItem>
                 <identifier>RecordSoil__cField</identifier>
             </fieldInstance>
@@ -300,6 +360,10 @@
                     <value>Facet-df52192e-84e5-4bb9-991b-aaacebc43425</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Location</value>
                 </componentInstanceProperties>
@@ -312,6 +376,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-077e2fde-d07d-43a5-b55a-32de7a12d2ff</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -328,6 +396,10 @@
                     <value>Facet-7c04aa29-9a3a-48ce-ab96-3f8f38aedc69</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Temperature</value>
                 </componentInstanceProperties>
@@ -340,6 +412,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-2dd719a0-d319-488c-a7a4-db9351578c53</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -355,12 +431,20 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Summer_Watering_Frequency__c</fieldItem>
                 <identifier>RecordWatering_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Watering_Notes__c</fieldItem>
                 <identifier>RecordWatering_Notes__cField</identifier>
             </fieldInstance>
@@ -371,12 +455,20 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Winter_Watering_Frequency__c</fieldItem>
                 <identifier>RecordWinter_Watering_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Pulverization__c</fieldItem>
                 <identifier>RecordPulverization__cField</identifier>
             </fieldInstance>
@@ -411,12 +503,20 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Summer_Fertilization_Frequency__c</fieldItem>
                 <identifier>RecordFertilization_Frequency__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Recommended_Fertilizer__c</fieldItem>
                 <identifier>RecordRecommended_Fertilizer__cField</identifier>
             </fieldInstance>
@@ -427,6 +527,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Winter_Fertilization_Frequency__c</fieldItem>
                 <identifier
         >RecordWinter_Fertilization_Frequency__cField</identifier>
@@ -462,6 +566,10 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Pruning_Notes__c</fieldItem>
                 <identifier>RecordPruning_Notes__cField</identifier>
             </fieldInstance>
@@ -505,6 +613,10 @@
                     <value>Facet-9aed4941-1239-419a-9144-51fc47c25965</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Watering</value>
                 </componentInstanceProperties>
@@ -519,6 +631,10 @@
                     <value>Facet-16885ff8-e5c6-4983-aa48-741966b04cd0</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Fertilization</value>
                 </componentInstanceProperties>
@@ -531,6 +647,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-31072e09-c7c7-4e64-94c5-95dcf2b60eb3</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -614,18 +734,30 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Propagation__c</fieldItem>
                 <identifier>RecordPropagation__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Propagation_Notes__c</fieldItem>
                 <identifier>RecordPropagation_Notes__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Sowing__c</fieldItem>
                 <identifier>RecordSowing__cField</identifier>
                 <visibilityRule>
@@ -639,6 +771,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Planting__c</fieldItem>
                 <identifier>RecordPlanting__cField</identifier>
                 <visibilityRule>
@@ -652,6 +788,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Planting_Distance_CM__c</fieldItem>
                 <identifier>RecordPlanting_Distance_CM__cField</identifier>
                 <visibilityRule>
@@ -665,6 +805,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Harvesting_After_Months__c</fieldItem>
                 <identifier>RecordHarvesting_After_Months__cField</identifier>
                 <visibilityRule>
@@ -678,6 +822,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Blooming__c</fieldItem>
                 <identifier>RecordBlooming__cField</identifier>
                 <visibilityRule>
@@ -691,6 +839,10 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Blooming_Notes__c</fieldItem>
                 <identifier>RecordBlooming_Notes__cField</identifier>
                 <visibilityRule>
@@ -725,6 +877,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f59a1030-75b5-4b03-bb6f-d2ca5c0bd199</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>

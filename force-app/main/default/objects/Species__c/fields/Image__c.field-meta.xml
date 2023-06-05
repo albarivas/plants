@@ -2,7 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Image__c</fullName>
     <externalId>false</externalId>
-    <formula>IMAGE(Image_URL__c, &quot;Image&quot;)</formula>
+    <formula
+  >IMAGE(&quot;/resource/species/images/&quot; + Image_Name__c, &quot;Image&quot;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Image</label>
     <required>false</required>

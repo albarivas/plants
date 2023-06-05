@@ -66,6 +66,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Species__c.Image_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Species__c.Image_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -218,11 +223,11 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
-        <tab>Species_with_Plants</tab>
+        <tab>Species__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
-        <tab>Species__c</tab>
+        <tab>Species_with_Plants</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>

@@ -10,7 +10,6 @@ public with sharing class SpeciesService {
       WITH SECURITY_ENFORCED
       ORDER BY Name
     ];
-
     return species;
   }
 
