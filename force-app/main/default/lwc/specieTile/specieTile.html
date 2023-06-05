@@ -2,7 +2,7 @@
 <template>
   <template if:true={specie}>
     <!-- Template para Desktop -->
-    <template if:true={isLargeFormFactor}>
+    <template lwc:if={isLargeFormFactor}>
       <lightning-card title={specie.Name} icon-name="custom:custom5">
         <lightning-button
           label="View Details"
