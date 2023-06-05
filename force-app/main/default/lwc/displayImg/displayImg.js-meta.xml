@@ -1,39 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>56.0</apiVersion>
-    <isExposed>true</isExposed>
-    <masterLabel>Component to show an Image</masterLabel>
-    <description
+  <apiVersion>56.0</apiVersion>
+  <isExposed>true</isExposed>
+  <masterLabel>Component to show an Image</masterLabel>
+  <description
   >Use this component to show an image that matchs the indicated URL.</description>
-    <targets>
-      <target>lightning__FlowScreen</target>
-    </targets>
-    <targetConfigs>
-       <targetConfig targets="lightning__FlowScreen">
-           <property
-        name="url"
-        label="Image URL"
-        type="String"
-        role="inputOnly"
-      />
-           <property
-        name="width"
-        label="Width"
-        type="String"
-        role="inputOnly"
-      />
-           <property
-        name="height"
-        label="Height"
-        type="String"
-        role="inputOnly"
-      />
-           <property
-        name="output"
-        label="Output"
-        type="String"
-        role="outputOnly"
-      />
-        </targetConfig>
-    </targetConfigs>
+  <targets>
+    <target>lightning__FlowScreen</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightning__FlowScreen">
+      <property name="url" label="Image URL" type="String" role="inputOnly" />
+      <property name="width" label="Width" type="String" role="inputOnly" />
+      <property name="height" label="Height" type="String" role="inputOnly" />
+      <property name="output" label="Output" type="String" role="outputOnly" />
+    </targetConfig>
+  </targetConfigs>
 </LightningComponentBundle>

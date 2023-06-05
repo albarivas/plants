@@ -27,7 +27,7 @@
 1. Create a scratch org and provide it with an alias (**plants** in the command below):
 
    ```
-   sf org create scratch -d -f config/project-scratch-def.json -a dreamhouse
+   sf org create scratch -d -f config/project-scratch-def.json -a plants
    ```
 
 1. Push the app to your scratch org:
