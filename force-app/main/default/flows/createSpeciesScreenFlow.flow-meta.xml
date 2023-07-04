@@ -3,7 +3,7 @@
   xmlns="http://soap.sforce.com/2006/04/metadata"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
-    <apiVersion>56.0</apiVersion>
+    <apiVersion>58.0</apiVersion>
     <assignments>
         <name>assignNotAssignedFields</name>
         <label>Assign not assigned Fields</label>
