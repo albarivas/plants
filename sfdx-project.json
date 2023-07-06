@@ -2,11 +2,21 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "package": "plants3",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": true,
+      "versionDescription": "",
+      "apexTestAccess": {
+        "permissionSets": ["Plants_App"]
+      }
     }
   ],
   "name": "plants",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "53.0"
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "plants3": "0HoDn000000sYEgKAM"
+  }
 }
