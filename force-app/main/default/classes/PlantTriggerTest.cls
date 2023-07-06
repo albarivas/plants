@@ -4,6 +4,7 @@ private with sharing class PlantTriggerTest {
   static void insertPlant_lastWateredSetup_nextWateringDateCalculatedCorrectly() {
     // GIVEN
     Species__c poto = new Species__c();
+    poto.Name = 'Poto';
     poto.Winter_Watering_Frequency__c = 'Every other week';
     poto.Summer_Watering_Frequency__c = 'Every other week';
     insert poto;
@@ -27,6 +28,7 @@ private with sharing class PlantTriggerTest {
   static void updatePlant_lastWateredSetup_nextWateringDateCalculatedCorrectly() {
     // GIVEN
     Species__c poto = new Species__c();
+    poto.Name = 'Poto';
     poto.Winter_Watering_Frequency__c = 'Every other week';
     poto.Summer_Watering_Frequency__c = 'Every other week';
     insert poto;

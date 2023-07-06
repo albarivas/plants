@@ -107,6 +107,7 @@
         </connector>
         <fields>
             <name>advancedInformation_Section1</name>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>advancedInformation_Section1_Column1</name>
@@ -244,6 +245,7 @@
         <fields>
             <name>summary_Section1</name>
             <fieldType>RegionContainer</fieldType>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <fields>
                 <name>summary_Section1_Column1</name>
                 <fieldType>Region</fieldType>
