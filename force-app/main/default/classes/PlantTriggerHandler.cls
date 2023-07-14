@@ -9,6 +9,8 @@ public with sharing class PlantTriggerHandler {
     // Query precarga objetos relacionados
     Map<Id, Species__c> speciesById = preloadRelatedSpecies(specieIds);
 
+    // Prepopulate required fields if not present
+
     // Prepopulate Next Watering Date
     for (Plant__c newPlant : newSObjects) {
       populateNextWateringDate(newPlant, speciesById);
