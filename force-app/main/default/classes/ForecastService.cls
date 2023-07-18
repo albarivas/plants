@@ -27,69 +27,51 @@ public inherited sharing class ForecastService {
       WITH SECURITY_ENFORCED
     ];
 
+    // Get the Id for our custom notification type
+    List<CustomNotificationType> notificationTypes = [
+      SELECT Id, DeveloperName
+      FROM CustomNotificationType
+      WHERE DeveloperName = 'Temperature_Alert'
+      WITH SECURITY_ENFORCED
+    ];
+
     // 3. Si encuentro alguna, mandar notificación
     for (Plant__c plantWithProblems : plantsWithProblems) {
-      // Get the Id for our custom notification type
-      CustomNotificationType notificationType = [
-        SELECT Id, DeveloperName
-        FROM CustomNotificationType
-        WHERE DeveloperName = 'Temperature_Alert'
-        WITH SECURITY_ENFORCED
-      ];
+      // Only send notification if custom notification type is defined
+      if (!notificationTypes.isEmpty()) {
+        // Create a new custom notification
+        Messaging.CustomNotification notification = new Messaging.CustomNotification();
 
-      // Create a new custom notification
-      Messaging.CustomNotification notification = new Messaging.CustomNotification();
+        setNotificationMessage(
+          notification,
+          maxTempToday,
+          minTempToday,
+          plantWithProblems
+        );
 
-      setNotificationMessage(
-        notification,
-        maxTempToday,
-        minTempToday,
-        plantWithProblems
-      );
+        // Set the notification type and target
+        notification.setNotificationTypeId(notificationTypes[0].Id);
+        notification.setTargetId(plantWithProblems.Id);
 
-      // Set the notification type and target
-      notification.setNotificationTypeId(notificationType.Id);
-      notification.setTargetId(plantWithProblems.Id);
-
-      // Actually send the notification
-      try {
-        notification.send(new Set<String>{ UserInfo.getUserId() });
-      } catch (Exception e) {
-        System.debug('Problem sending notification: ' + e.getMessage());
+        // Actually send the notification
+        CustomNotificationsService.send(notification);
       }
 
       // Send a platform event
-      System.debug('Before publishing platform event.');
       Plant_with_Problem__e plantWithProblemEvent = new Plant_with_Problem__e(
         Plant_Id__c = plantWithProblems.Id,
-        Tipo_de_Alerta__c = 'frio'
+        Tipo_de_Alerta__c = getAlertType(
+          maxTempToday,
+          minTempToday,
+          plantWithProblems
+        )
       );
 
       List<Plant_with_Problem__e> plantWithProblemEvents = new List<Plant_with_Problem__e>();
       plantWithProblemEvents.add(plantWithProblemEvent);
 
-      //List<Plant_with_Problem__e> plantWithProblemEvents = new List<Plant_with_Problem__e>{plantWithProblemEvent};
-
       // Call method to publish events
-      List<Database.SaveResult> results = EventBus.publish(
-        plantWithProblemEvents
-      );
-
-      // Inspect publishing result for each event
-      for (Database.SaveResult sr : results) {
-        if (sr.isSuccess()) {
-          System.debug('Successfully published event.');
-        } else {
-          for (Database.Error err : sr.getErrors()) {
-            System.debug(
-              'Error returned: ' +
-              err.getStatusCode() +
-              ' - ' +
-              err.getMessage()
-            );
-          }
-        }
-      }
+      PlatformEventsService.publish(plantWithProblemEvents);
     }
   }
 
@@ -104,29 +86,43 @@ public inherited sharing class ForecastService {
       notification.setTitle('Mucho calor para tu planta!!!');
       notification.setBody(
         'Hoy el termómetro alcanzará ' +
-        maxTempToday +
-        ' grados.\n' +
-        ' La temperatura máxima que ' +
-        plant.Name +
-        ' (' +
-        plant.Species__r.Name +
-        ') soporta es ' +
-        plant.Species__r.Max_Temperature__c
+          maxTempToday +
+          ' grados.\n' +
+          ' La temperatura máxima que ' +
+          plant.Name +
+          ' (' +
+          plant.Species__r.Name +
+          ') soporta es ' +
+          plant.Species__r.Max_Temperature__c
       );
     } else if (plant.Species__r.Min_Temperature__c > minTempToday) {
       notification.setTitle('Mucho frío para tu planta!!!');
       notification.setBody(
         'Hoy el termómetro bajará de los ' +
-        minTempToday +
-        ' grados.\n' +
-        ' La temperatura mínima que ' +
-        plant.Name +
-        ' (' +
-        plant.Species__r.Name +
-        ') soporta es ' +
-        plant.Species__r.Max_Temperature__c
+          minTempToday +
+          ' grados.\n' +
+          ' La temperatura mínima que ' +
+          plant.Name +
+          ' (' +
+          plant.Species__r.Name +
+          ') soporta es ' +
+          plant.Species__r.Max_Temperature__c
       );
     }
+  }
+
+  private static String getAlertType(
+    Integer maxTempToday,
+    Integer minTempToday,
+    Plant__c plant
+  ) {
+    // Set the contents for the notification
+    if (plant.Species__r.Max_Temperature__c < maxTempToday) {
+      return 'calor';
+    } else if (plant.Species__r.Min_Temperature__c > minTempToday) {
+      return 'frio';
+    }
+    return 'error';
   }
 
   public static Forecast getTodaysTemperatures() {

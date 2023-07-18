@@ -21,7 +21,7 @@ private with sharing class SpeciesServiceTest {
   @isTest
   static void getSpeciesWithPlants_returnsPlantsAndSpeciesCorrectly() {
     // GIVEN
-    createSpecies();
+    new TestDataFactory().createSpecies();
 
     // WHEN
     List<Species__c> returnedSpecies = SpeciesService.getSpeciesWithPlants();
@@ -51,28 +51,5 @@ private with sharing class SpeciesServiceTest {
       plantAcquisitionDate,
       returnedPlants[0].Acquisition_Date__c
     );
-  }
-
-  static void createSpecies() {
-    Species__c species = new Species__c(
-      Name = 'Species1',
-      Summer_Watering_Frequency__c = 'Daily',
-      Winter_Watering_Frequency__c = 'Weekly'
-    );
-    insert species;
-
-    Plant__c plant1 = new Plant__c(
-      Species__c = species.Id,
-      Last_Watered__c = System.today(),
-      Last_Fertilized__c = System.today()
-    );
-    insert plant1;
-
-    Plant__c plant2 = new Plant__c(
-      Species__c = species.Id,
-      Last_Watered__c = System.today(),
-      Last_Fertilized__c = System.today()
-    );
-    insert plant2;
   }
 }

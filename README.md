@@ -56,3 +56,9 @@
    ```
 
 1. Select custom theme: setup --> Themes and Branding --> Plants App --> Activate
+
+1. Create a custom notification type: setup --> Custom Notifications --> New Custom Notification Type
+
+- Name: Temperature Alert
+- Developer Name: Temperature_Alert
+- Make it available for Desktop and Mobile
