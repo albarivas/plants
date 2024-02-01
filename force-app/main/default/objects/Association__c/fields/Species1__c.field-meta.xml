@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Species1__c</fullName>
+    <externalId>false</externalId>
+    <label>Species1</label>
+    <referenceTo>Species__c</referenceTo>
+    <relationshipLabel>Associations</relationshipLabel>
+    <relationshipName>Associations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

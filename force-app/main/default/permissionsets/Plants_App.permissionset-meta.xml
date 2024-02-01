@@ -6,6 +6,16 @@
     </applicationVisibilities>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Association__c.Relacion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Association__c.Species2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Plant__c.Acquisition_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -201,6 +211,15 @@
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Association__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Plant__c</object>
         <viewAllRecords>true</viewAllRecords>
@@ -214,6 +233,10 @@
         <object>Species__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>Association__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
     <tabSettings>
         <tab>Plant__c</tab>
         <visibility>Visible</visibility>

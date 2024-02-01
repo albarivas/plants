@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment
+    >Action override created by Lightning App Builder during activation.</comment>
+        <content>Association_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Association__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment
+    >Action override created by Lightning App Builder during activation.</comment>
+        <content>Association_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Association__c</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#1AB72B</headerColor>
         <logo>bonsai</logo>
@@ -10,12 +30,14 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>My Plants App</label>
     <navType>Standard</navType>
     <tabs>Species__c</tabs>
     <tabs>Species_Explorer</tabs>
     <tabs>Species_with_Plants</tabs>
     <tabs>Plant__c</tabs>
+    <tabs>Association__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>My_Plants_App_UtilityBar</utilityBar>
 </CustomApplication>
