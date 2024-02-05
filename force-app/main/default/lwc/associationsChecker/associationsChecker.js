@@ -64,16 +64,19 @@ export default class AssociationsChecker extends LightningElement {
     );
 
     // If dragging from species area, clone element
-    const cloneIndex = draggableElement.dataset.id.includes("_")
-      ? draggableElement.dataset.id.split("_")[1]
-      : 0;
-    if (cloneIndex === 0) {
+    const fromSpeciesArea = !draggableElement.dataset.id.includes("_");
+    if (fromSpeciesArea) {
+      // Get number of clones, to determine next index
+      const clonedElements = this.template.querySelectorAll(
+        `[data-id^=${dataIdProp}]`
+      );
       const clonedElement = draggableElement.cloneNode(true);
       clonedElement.addEventListener("dragstart", this.onDragStart);
-      clonedElement.dataset.id = `${clonedElement.dataset.id}_${
-        cloneIndex + 1
-      }`;
+      clonedElement.dataset.id = `${clonedElement.dataset.id}_${clonedElements.length}`;
       clonedElement.classList.add("dropped");
+      const removeElementLink = clonedElement.querySelector("a.remove-element");
+      removeElementLink.classList.toggle("slds-hide");
+      removeElementLink.addEventListener("click", this.removeElement);
       draggableElement = clonedElement;
     }
 
@@ -136,5 +139,9 @@ export default class AssociationsChecker extends LightningElement {
       sibling.style.backgroundColor = RED;
       droppedElement.style.backgroundColor = RED;
     }
+  }
+
+  removeElement(event) {
+    event.currentTarget.parentElement.remove();
   }
 }
