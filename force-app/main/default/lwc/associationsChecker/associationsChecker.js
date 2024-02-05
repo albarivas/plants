@@ -59,14 +59,26 @@ export default class AssociationsChecker extends LightningElement {
   onDrop(event) {
     const dataIdProp = event.dataTransfer.getData("text");
 
-    const draggableElement = this.template.querySelector(
+    let draggableElement = this.template.querySelector(
       `[data-id=${dataIdProp}]`
     );
-    const clonedElement = draggableElement.cloneNode(true);
-    const dropzone = event.target;
 
-    clonedElement.classList.add("dropped");
-    dropzone.appendChild(clonedElement);
+    // If dragging from species area, clone element
+    const cloneIndex = draggableElement.dataset.id.includes("_")
+      ? draggableElement.dataset.id.split("_")[1]
+      : 0;
+    if (cloneIndex === 0) {
+      const clonedElement = draggableElement.cloneNode(true);
+      clonedElement.addEventListener("dragstart", this.onDragStart);
+      clonedElement.dataset.id = `${clonedElement.dataset.id}_${
+        cloneIndex + 1
+      }`;
+      clonedElement.classList.add("dropped");
+      draggableElement = clonedElement;
+    }
+
+    const dropzone = event.target;
+    dropzone.appendChild(draggableElement);
 
     event.dataTransfer.clearData();
   }
@@ -78,10 +90,13 @@ export default class AssociationsChecker extends LightningElement {
     droppedElements.forEach((droppedElement) => {
       // Find species associations info
       if (this.associationsInfo.data) {
-        // Find next sibling in column
+        const droppedElementId = droppedElement.dataset.id.includes("_")
+          ? droppedElement.dataset.id.split("_")[0]
+          : droppedElement.dataset.id;
+        // Find next sibling in same column
         const nextSibling = droppedElement.nextSibling;
         const speciesWithAssociationsInfo = this.associationsInfo.data.find(
-          (species) => species.speciesId === droppedElement.dataset.id
+          (species) => species.speciesId === droppedElementId
         );
         if (nextSibling != null) {
           this.changeBackgroundColor(
@@ -92,9 +107,9 @@ export default class AssociationsChecker extends LightningElement {
         }
         // Find sibling in next column
         const nextColumn = droppedElement.parentElement.nextSibling;
-        const indexInOwnColumn = Array.from(
-          droppedElement.parentNode.children
-        ).indexOf(droppedElement);
+        const indexInOwnColumn = [
+          ...droppedElement.parentNode.children
+        ].indexOf(droppedElement);
         const siblingInNextColumn = nextColumn.children[indexInOwnColumn];
         if (siblingInNextColumn != null) {
           this.changeBackgroundColor(
@@ -108,7 +123,10 @@ export default class AssociationsChecker extends LightningElement {
   }
 
   changeBackgroundColor(droppedElement, sibling, speciesWithAssociationsInfo) {
-    const siblingId = sibling.dataset.id;
+    const siblingId = sibling.dataset.id.includes("_")
+      ? sibling.dataset.id.split("_")[0]
+      : sibling.dataset.id;
+
     if (speciesWithAssociationsInfo.goodPartners.includes(siblingId)) {
       sibling.style.backgroundColor = GREEN;
       if (droppedElement.style.backgroundColor !== RED) {
