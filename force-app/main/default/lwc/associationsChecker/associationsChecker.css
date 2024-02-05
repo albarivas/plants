@@ -1,0 +1,36 @@
+.species-element {
+  background-color: rgb(176, 255, 166);
+  border: 2px solid rgb(29, 143, 15);
+  margin-bottom: var(--lwc-varSpacingVerticalXSmall, spacingXSmall);
+  color: rgb(29, 143, 15);
+  font-family: fantasy;
+  font-size: large;
+}
+
+.species-element.dropped {
+  background-color: rgb(255, 250, 166);
+  border-color: rgb(203, 179, 0);
+  color: rgb(156, 94, 5);
+  /* Avoid double borders */
+  margin-bottom: -2px;
+  margin-left: 0px;
+  margin-right: 4px;
+  height: 102px;
+  line-height: 80px;
+}
+
+.plot-area {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.plot-slot {
+  height: 302px;
+  background-color: rgb(255, 200, 105);
+  outline: 4px solid rgb(234, 162, 38);
+}
+
+.check-area {
+  font-size: large;
+  margin-top: 40px;
+}

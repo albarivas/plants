@@ -1,0 +1,45 @@
+<template>
+  <lightning-card>
+    <!-- Drag & drop -->
+    <div class="planner slds-grid slds-wrap">
+      <div
+        class="species-area slds-col slds-size_1-of-12 slds-var-p-around_medium"
+      >
+        <template for:each={edibleSpecies} for:item="species">
+          <div
+            key={species.Id}
+            data-id={species.Id}
+            class="species-element slds-var-p-top_x-small slds-text-align_center"
+            draggable="true"
+            ondragstart={onDragStart}
+          >
+            {species.Name}
+          </div>
+        </template>
+      </div>
+      <div class="slds-col slds-size_11-of-12 slds-var-p-around_medium">
+        <div class="plot-area slds-col">
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+          <div class="plot-slot" ondragover={onDragOver} ondrop={onDrop}></div>
+        </div>
+        <div class="check-area slds-align_absolute-center">
+          <lightning-button
+            label="Check associations!"
+            variant="brand"
+            onclick={checkAssociations}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>

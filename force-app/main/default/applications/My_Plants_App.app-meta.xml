@@ -38,6 +38,7 @@
     <tabs>Species_with_Plants</tabs>
     <tabs>Plant__c</tabs>
     <tabs>Association__c</tabs>
+    <tabs>Associations_Checker</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>My_Plants_App_UtilityBar</utilityBar>
 </CustomApplication>
