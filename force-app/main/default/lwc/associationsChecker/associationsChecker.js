@@ -8,7 +8,7 @@ const GREEN = "rgb(176, 255, 166)";
 export default class AssociationsChecker extends LightningElement {
   edibleSpecies;
   edibleSpeciesIds;
-  error;
+  errors;
 
   @wire(graphql, {
     query: gql`
@@ -30,7 +30,7 @@ export default class AssociationsChecker extends LightningElement {
       }
     `
   })
-  getExistingSpecies({ data, error }) {
+  getExistingSpecies({ data, errors }) {
     if (data) {
       this.edibleSpecies = data.uiapi.query.Species__c.edges.map((edge) => ({
         Id: edge.node.Id,
@@ -38,9 +38,9 @@ export default class AssociationsChecker extends LightningElement {
       }));
       // Get speciesIds so their associations are retrieved
       this.edibleSpeciesIds = this.edibleSpecies.map((species) => species.Id);
-      this.error = undefined;
-    } else if (error) {
-      this.error = error;
+      this.errors = undefined;
+    } else if (errors) {
+      this.errors = errors;
       this.edibleSpecies = undefined;
     }
   }
